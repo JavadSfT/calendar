@@ -12,7 +12,7 @@ let createCalendarStorage = () => {
 }
 
 let getIntervalProgram = () => {
-    return localStorage.getItem(INTERVAL_PRPGRAM);
+    return JSON.parse(localStorage.getItem(INTERVAL_PRPGRAM));
 }
 
 let setIntervalProgram = (interval_Program = {}) => {
@@ -20,7 +20,7 @@ let setIntervalProgram = (interval_Program = {}) => {
 }
 
 let getStaticProgram = () => {
-    return localStorage.getItem(STATIC_PROGRAM);
+    return JSON.parse(localStorage.getItem(STATIC_PROGRAM));
 }
 
 let setStaticProgram = (static_Program = []) => {
