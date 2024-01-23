@@ -7,4 +7,87 @@
     margin: 0;
     padding: 0;
     font-family: VAZIR;
+    direction: rtl;
+}
+
+.hide {
+    display: none !important;
+}
+
+
+/*site_dashboard_give_rent_config */
+#schedule_info_table {
+    border-radius: 25px;
+    padding: 20px;
+    box-shadow: 0 0 5px black;
+    margin-bottom: 30px;
+}
+
+.option-calculate {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    text-decoration: none;
+    outline: none;
+}
+
+#schedule_info_table_bt button {
+    background-color: green;
+    border-radius: 20px;
+    height: 30px;
+    width: 80px;
+    cursor: pointer;
+    border: none;
+    color: white;
+}
+
+
+#specefic_give_btn_update {
+    background-color: magenta !important;
+}
+
+#specefic_give_btn_delete {
+    background-color: red !important;
+}
+
+#specefic_give_btn_cancel {
+    background-color: royalblue !important;
+}
+
+#schedule_info_table tr:nth-child(odd) {
+    background-color: whitesmoke;
+}
+
+#schedule_info_table tr:nth-child(even) {
+    background-color: cornsilk;
+}
+
+#schedule_info_table td {
+    padding: 6px;
+    border-radius: 10px;
+}
+
+#schedule_info_table_modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 6000;
+}
+
+#td_description{
+    border: none;
+    outline: none;
+}
+
+@media(max-width:16cm) {
+    #schedule_info_table {
+        width: 97%;
+    }
 }

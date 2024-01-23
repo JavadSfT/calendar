@@ -1,5 +1,6 @@
 
 const CALENDAR_ELEM = document.querySelector("#calendar_container");
+let calendar;
 
 let calendarInit = (calendarEvents = []) => {
     calendar = new FullCalendar.Calendar(CALENDAR_ELEM, {
@@ -26,9 +27,9 @@ let calendarInit = (calendarEvents = []) => {
         // selectOverlap: false,
         // eventOverlap : true,
 
-        // select: function (arg) {
-
-        // },
+        select: function (arg) {
+            document.querySelector("#schedule_info_table_modal").classList.remove("hide")
+        },
 
         // eventClick: function (arg) {
         // }
@@ -38,4 +39,23 @@ let calendarInit = (calendarEvents = []) => {
 
 let sortCalendarEvents = (intervalProgram = {}, staticProgarm = []) => {
 
+}
+
+function acceptEvent() {
+    cancelEvent();
+}
+
+function editEvent() {
+    cancelEvent();
+}
+
+
+function deleteEvent() {
+    cancelEvent();
+}
+
+
+function cancelEvent() {
+    document.querySelector("#schedule_info_table_modal").classList.add("hide");
+    calendar.unselect();
 }

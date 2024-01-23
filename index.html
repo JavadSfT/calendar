@@ -11,8 +11,43 @@
 <body>
 
     <div id="calendar_container"></div>
-
     
+    <div id="schedule_info_table_modal" class="hide">
+        <table id="schedule_info_table">
+            <tr>
+                <td>روز : </td>
+                <td id="td_dateName"></td>
+            </tr>
+            <tr>
+                <td>ساعت شروع : </td>
+                <td id="td_startTime"></td>
+            </tr>
+            <tr>
+                <td>ساعت پایان : </td>
+                <td id="td_endTime"></td>
+            </tr>
+            <tr>
+                <td>توضیحات : </td>
+                <td><input type="text" name="" id="td_description" style="width: 500px;"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="display: flex;">
+                    <p><input type="radio" name="scheduleTypeCalendar" id="" value="1" checked> برنامه ثابت </p>
+                    <p><input type="radio" name="scheduleTypeCalendar" id="" value="2"> برنامه موقت</p>
+                </td>
+            </tr>
+        </table>
+        <div id="schedule_info_table_bt">
+            <button onclick="acceptEvent()" id="specefic_give_btn_submit">تایید </button>
+            <button onclick="editEvent()" id="specefic_give_btn_update" class="hide">ویرایش</button>
+            <button onclick="deleteEvent()" id="specefic_give_btn_delete">حذف</button>
+            <button onclick="cancelEvent()" id="specefic_give_btn_cancel">منصرف شدم</button>
+        </div>
+    </div>
+
+
+
     <script src="static/lib/fullcalendar/dist/index.global.js"></script>
     <script src="static/lib/fullcalendar/packages/core/locales/fa.global.min.js"></script>
     <script src="static/script/CalendarInit.js"></script>
