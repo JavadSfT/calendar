@@ -10,8 +10,10 @@
 
 <body>
 
-    <div id="calendar_container"></div>
-    
+    <div style=" overflow-x: scroll;">
+        <div id="calendar_container" style="width: 800px;"></div>
+    </div>
+
     <div id="schedule_info_table_modal" class="hide">
         <table id="schedule_info_table">
             <tr>
@@ -50,8 +52,14 @@
 
     <script src="static/lib/fullcalendar/dist/index.global.js"></script>
     <script src="static/lib/fullcalendar/packages/core/locales/fa.global.min.js"></script>
+
+    <script src="static/script/Tools.js"></script>
     <script src="static/script/CalendarInit.js"></script>
+    <script src="static/script/CalanderTools.js"></script>
+    <script src="static/script/CalendarEvents.js"></script>
     <script src="static/script/StorageUnit.js"></script>
+    
+    
     <script src="static/script/script.js"></script>
 </body>
 
