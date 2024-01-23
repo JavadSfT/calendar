@@ -1,0 +1,10 @@
+@font-face {
+    font-family: VAZIR;
+    src: url(../fonts/Vazir-Regular-UI.woff2);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: VAZIR;
+}

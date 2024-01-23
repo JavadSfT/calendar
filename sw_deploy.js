@@ -9,7 +9,7 @@ const CACHE_ASSETS = [
     "/static/script/CalendarInit.js",
     "/static/lib/fullcalendar/dist/index.global.min.js",
     "/static/lib/fullcalendar/packages/core/locales/fa.global.min.js",
-    "/static/fonts/Vazir-Regular.ttf",
+    "/static/fonts/Vazir-Regular-UI.woff2",
     "static/pages/fallback.html"
 ];
 

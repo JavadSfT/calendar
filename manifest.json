@@ -1,0 +1,31 @@
+{
+    "name": "calendar",
+    "short_name": "calendar",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#FFE9D2",
+    "theme_color": "#FFE1C4",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/static/icon/calendar-36.png",
+            "sizes": "36x36"
+        },
+        {
+            "src": "/static/icon/calendar-48.png",
+            "sizes": "48x48"
+        },
+        {
+            "src": "/static/icon/calendar-72.png",
+            "sizes": "72x72"
+        },
+        {
+            "src": "/static/icon/calendar-98.png",
+            "sizes": "98x98"
+        },
+        {
+            "src": "/static/icon/calendar-100.png",
+            "sizes": "any"
+        }
+    ]
+}
