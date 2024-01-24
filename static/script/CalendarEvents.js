@@ -8,10 +8,8 @@ function acceptEvent() {
             let o = {
                 id: currentSelectedEventId,
                 backgroundColor: PROGRAM_STATE["interval"].color,
-                eTime: getCustomeTimeObject(event.end),
                 end: new Date(event.end).getTime() + ((86400000 * 7) * i),
                 programState: PROGRAM_STATE["interval"].state,
-                sTime: getCustomeTimeObject(event.start),
                 start: new Date(event.start).getTime() + ((86400000 * 7) * i),
                 title: DESCRIPTION_ELEMENT.value
             }
@@ -38,7 +36,8 @@ function acceptEvent() {
 
     event.remove();
     DESCRIPTION_ELEMENT.value = "";
-    cancelEvent()
+    cancelEvent();
+    updateCalendarEvents();
 }
 
 function editEvent() {
@@ -81,6 +80,7 @@ function editEvent() {
 
     DESCRIPTION_ELEMENT.value = "";
     cancelEvent();
+    updateCalendarEvents();
 }
 
 
@@ -101,6 +101,7 @@ function deleteEvent() {
 
     DESCRIPTION_ELEMENT.value = "";
     cancelEvent();
+    updateCalendarEvents();
 }
 
 

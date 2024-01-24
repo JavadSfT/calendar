@@ -62,7 +62,7 @@ let calendarInit = (calendarEvents = []) => {
             putEventHourAndState(o);
 
             let newEvent = {
-                id: serializedEventId++,
+                id: ++serializedEventId,
                 start: arg.start,
                 end: arg.end,
                 color: PROGRAM_STATE["wait"].color,
@@ -95,60 +95,41 @@ let calendarInit = (calendarEvents = []) => {
 }
 
 let sortCalendarEvents = (intervalProgram = [], staticProgarm = []) => {
-    
-    for (let i = 0; i < 7; i++) {
-        let day = new Date(new Date(new Date().toLocaleDateString()).getTime() + (86400000 * i));
-        let change = getKeyByValue(WEEKLY_SCHEDULE, "dayOfWeek", day.getDay());
-        change["baseDate"] = day.getTime();
+
+    let getWeeklyTimer = (timer, week) => {
+        return timer + (86400000 * (week * 7))
     }
 
     for (const iterator of intervalProgram) {
-        let endTimeHour = (iterator["eTime"][0] == 0) ? 24 : iterator["eTime"][0];
-        let endTimeMin = (iterator["sTime"][1] == undefined) ? 0 : iterator["sTime"][1];
-        let startDate = new Date(iterator["start"]).getDay();
-        let endDate = new Date(iterator["end"]).getDay()
-        let o = {
-            title: iterator["title"],
-            start: new Date(WEEKLY_SCHEDULE[startDate].baseDate).setHours(iterator["sTime"][0], iterator["eTime"][1]),
-            end: new Date(WEEKLY_SCHEDULE[endDate].baseDate).setHours(endTimeHour, endTimeMin),
-            backgroundColor: PROGRAM_STATE["interval"].color,
-            programState: PROGRAM_STATE["interval"].state,
-            sTime: iterator["sTime"],
-            eTime: iterator["eTime"]
+        serializedEventId++;
+        for (let i = 0; i < 10; i++) {
+            let o = {
+                id: serializedEventId,
+                title: iterator["title"],
+                start: getWeeklyTimer(iterator["start"], i),
+                end: getWeeklyTimer(iterator["end"], i),
+                backgroundColor: PROGRAM_STATE["interval"].color,
+                programState: PROGRAM_STATE["interval"].state,
+            }
+            serializedEventsArry.push(o);
+            if (i == 0) {
+                diserializedIntervalArry.push(o);
+            }
         }
+    }
+
+    for (const iterator of staticProgarm) {
+        let o = {
+            id: ++serializedEventId,
+            title: iterator["title"],
+            start: Number(iterator["start"]),
+            end: Number(iterator["end"]),
+            backgroundColor: PROGRAM_STATE["specefic"].color,
+            programState: PROGRAM_STATE["specefic"].state
+        }
+        serializedEventsArry.push(o);
         diserializedIntervalArry.push(o);
     }
 
-
-    // for (const iterator of obj.specefic) {
-    //     let o = {
-    //         id: serializedEventId++,
-    //         title: iterator["title"],
-    //         start: Number(iterator["time"][0]) * 1000,
-    //         end: Number(iterator["time"][1]) * 1000,
-    //         backgroundColor: PROGRAM_STATE["specefic"].color,
-    //         programState: PROGRAM_STATE["specefic"].state
-    //     }
-    //     serializedEventsArry.push(o);
-    // }
-
-
-
-
-
-    // for (let i = 0; i < diserializedIntervalArry.length; i++) {
-    //     diserializedIntervalArry[i].id = serializedEventId++;
-
-    //     for (let j = 0; j < 4; j++) {
-    //         let o = {
-    //             id: diserializedIntervalArry[i]["id"],
-    //             title: diserializedIntervalArry[i]["title"],
-    //             start: diserializedIntervalArry[i]["start"] + ((86400000 * 7) * j),
-    //             end: diserializedIntervalArry[i]["end"] + ((86400000 * 7) * j),
-    //             backgroundColor: diserializedIntervalArry[i]["backgroundColor"],
-    //             programState: diserializedIntervalArry[i]["programState"]
-    //         }
-    //         serializedEventsArry.push(o);
-    //     }
-    // }
+    return serializedEventsArry;
 }

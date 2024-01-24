@@ -9,8 +9,3 @@ let createCustomeTime = (time) => {
     let minute = (String(date.getMinutes()).length == 2) ? date.getMinutes() : `0${date.getMinutes()}`;
     return `${date.getHours()}:${minute}`;
 }
-
-let getCustomeTimeObject = (time) => {
-    let date = new Date(time);
-    return [date.getHours(), date.getMinutes()];
-}

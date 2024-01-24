@@ -26,8 +26,6 @@ let putProgramStateRadioButton = (programState, type) => {
 let addNewEventObj = (obj) => {
     let o = {
         id: obj.id,
-        sTime: getCustomeTimeObject(obj.start),
-        eTime: getCustomeTimeObject(obj.end),
         start: new Date(obj.start).getTime(),
         end: new Date(obj.end).getTime(),
         title: obj.title,
