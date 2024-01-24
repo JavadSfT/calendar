@@ -8,23 +8,23 @@
     "orientation": "portrait-primary",
     "icons": [
         {
-            "src": "/static/icon/calendar-36.svg",
+            "src": "./static/icon/calendar-36.svg",
             "sizes": "36x36"
         },
         {
-            "src": "/static/icon/calendar-72.svg",
+            "src": "./static/icon/calendar-72.svg",
             "sizes": "72x72"
         },
         {
-            "src": "/static/icon/calendar-98.svg",
+            "src": "./static/icon/calendar-98.svg",
             "sizes": "98x98"
         },
         {
-            "src": "/static/icon/calendar-114.svg",
+            "src": "./static/icon/calendar-114.svg",
             "sizes": "114x114"
         },
         {
-            "src": "/static/icon/calendar.svg",
+            "src": "./static/icon/calendar.svg",
             "sizes": "any"
         }
     ]
