@@ -1,20 +1,20 @@
 const STATIC_CACHE_NAME = "wpa_calendar_cache";
 
 const CACHE_ASSETS = [
-    "/",
-    "/index.html",
-    "static/pages/fallback.html",
-    "/static/style/style.css",
-    "/static/script/script.js",
-    "/static/script/CalanderTools.js",
-    "/static/script/CalendarEvents.js",
-    "/static/script/CalendarInit.js",
-    "/static/script/StorageUnit.js",
-    "/static/script/Tools.js",
+    "./",
+    "./index.html",
+    "./static/pages/fallback.html",
+    "./static/style/style.css",
+    "./static/script/script.js",
+    "./static/script/CalanderTools.js",
+    "./static/script/CalendarEvents.js",
+    "./static/script/CalendarInit.js",
+    "./static/script/StorageUnit.js",
+    "./static/script/Tools.js",
 
-    "/static/lib/fullcalendar/dist/index.global.min.js",
-    "/static/lib/fullcalendar/packages/core/locales/fa.global.min.js",
-    "/static/fonts/Vazir-Regular-UI.woff2"
+    "./static/lib/fullcalendar/dist/index.global.min.js",
+    "./static/lib/fullcalendar/packages/core/locales/fa.global.min.js",
+    "./static/fonts/Vazir-Regular-UI.woff2"
 ];
 
 self.addEventListener("install", evt => {
