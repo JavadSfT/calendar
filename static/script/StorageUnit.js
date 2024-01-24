@@ -7,7 +7,7 @@ let isStorageExist = () => {
 }
 
 let createCalendarStorage = () => {
-    localStorage.setItem(INTERVAL_PRPGRAM, JSON.stringify({}));
+    localStorage.setItem(INTERVAL_PRPGRAM, JSON.stringify([]));
     localStorage.setItem(STATIC_PROGRAM, JSON.stringify([]));
 }
 
@@ -15,7 +15,7 @@ let getIntervalProgram = () => {
     return JSON.parse(localStorage.getItem(INTERVAL_PRPGRAM));
 }
 
-let setIntervalProgram = (interval_Program = {}) => {
+let setIntervalProgram = (interval_Program = []) => {
     localStorage.setItem(INTERVAL_PRPGRAM, JSON.stringify(interval_Program));
 }
 

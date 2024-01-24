@@ -94,10 +94,8 @@ let calendarInit = (calendarEvents = []) => {
     calendar.render();
 }
 
-let sortCalendarEvents = (intervalProgram = {}, staticProgarm = []) => {
-
-
-
+let sortCalendarEvents = (intervalProgram = [], staticProgarm = []) => {
+    
     for (let i = 0; i < 7; i++) {
         let day = new Date(new Date(new Date().toLocaleDateString()).getTime() + (86400000 * i));
         let change = getKeyByValue(WEEKLY_SCHEDULE, "dayOfWeek", day.getDay());
