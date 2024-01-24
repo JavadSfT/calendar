@@ -4,7 +4,7 @@ function acceptEvent() {
     let radio = document.querySelector('input[name="scheduleTypeCalendar"]:checked').value;
 
     if (radio == PROGRAM_STATE["interval"].state) {
-        for (let i = 0; i < 4; i++) {
+        for (let i = 0; i < 50; i++) {
             let o = {
                 id: currentSelectedEventId,
                 backgroundColor: PROGRAM_STATE["interval"].color,

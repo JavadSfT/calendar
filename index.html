@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>calendar</title>
     <link rel="stylesheet" href="static/style/style.css">
+    
+    <link rel="manifest" href="manifest.json">
 </head>
 
 <body>
 
-    <div>
-        <div id="calendar_container"></div>
+    <div id="calendar_container">
+        <div id="calendar"></div>
     </div>
 
     <div id="schedule_info_table_modal" class="hide">
@@ -50,7 +52,7 @@
 
 
 
-    <script src="static/lib/fullcalendar/dist/index.global.js"></script>
+    <script src="static/lib/fullcalendar/dist/index.global.min.js"></script>
     <script src="static/lib/fullcalendar/packages/core/locales/fa.global.min.js"></script>
 
     <script src="static/script/Tools.js"></script>
@@ -59,8 +61,9 @@
     <script src="static/script/CalendarEvents.js"></script>
     <script src="static/script/StorageUnit.js"></script>
     
-    
     <script src="static/script/script.js"></script>
+
+    <script src="sw_init.js"></script>
 </body>
 
 </html>

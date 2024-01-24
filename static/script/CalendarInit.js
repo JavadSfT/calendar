@@ -1,5 +1,5 @@
 
-const CALENDAR_ELEM = document.querySelector("#calendar_container");
+const CALENDAR_ELEM = document.querySelector("#calendar");
 const DESCRIPTION_ELEMENT = document.querySelector("#td_description");
 let calendar, currentSelectedEventId, serializedEventId = 0;
 
@@ -102,7 +102,7 @@ let sortCalendarEvents = (intervalProgram = [], staticProgarm = []) => {
 
     for (const iterator of intervalProgram) {
         serializedEventId++;
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < 50; i++) {
             let o = {
                 id: serializedEventId,
                 title: iterator["title"],
