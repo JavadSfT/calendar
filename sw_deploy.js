@@ -2,6 +2,7 @@ const STATIC_CACHE_NAME = "wpa_calendar_cache";
 
 const CACHE_ASSETS = [
     "./",
+    "./calendar",
     "./index.html",
     "./static/pages/fallback.html",
     "./static/style/style.css",
