@@ -9,11 +9,12 @@ simple **web-app** calendar project.
 - **javascript**
 - **[fullcalendar library](https://github.com/fullcalendar)**
 
+you can check project on **[github page](https://javadsft.github.io/calendar/src/)** or **[liara cloud](https://calendar.liara.run)**
+
 ----------
 
-check project on **[github page](https://javadsft.github.io/calendar/src/)** or **[liara cloud](https://calendar.liara.run)**
+### `note :`
 
-> note :
 > | This project needs a lot of time to complete |
 > |----------------------------------------------|
 >
